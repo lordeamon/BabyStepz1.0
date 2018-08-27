@@ -3,18 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BabyStepz.Views.ItemsPage"
               Title="{Binding Title}"
-             x:Name="BrowseItemsPage">
+             x:Name="BrowseItemsPage"
+             >
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Clicked="AddItem_Clicked">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="UWP" Value="add.png"/>
+                    <On Platform="Android" Value="ic_action_add_circle_outline.png"/>
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout >
             <ListView x:Name="ItemsListView" 
                 ItemsSource="{Binding Items}"
                 VerticalOptions="FillAndExpand"
@@ -23,7 +25,8 @@
                  IsPullToRefreshEnabled="true"
                  IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  CachingStrategy="RecycleElement"
-                 ItemSelected="OnItemSelected">
+                 ItemSelected="OnItemSelected"
+                      SeparatorColor="#7b1fa2">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -31,11 +34,11 @@
                                 <Label Text="{Binding Text}" 
                        LineBreakMode="NoWrap" 
                        Style="{DynamicResource ListItemTextStyle}" 
-                       FontSize="16" />
+                       FontSize="16" TextColor="White" />
                                 <Label Text="{Binding Description}" 
                        LineBreakMode="NoWrap"
                        Style="{DynamicResource ListItemDetailTextStyle}"
-                       FontSize="13" />
+                       FontSize="13" TextColor="#999999"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

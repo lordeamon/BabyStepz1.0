@@ -4,9 +4,11 @@
              x:Class="BabyStepz.Views.ItemDetailPage"
              Title="{Binding Title}">
     <StackLayout Spacing="20" Padding="15">
-        <Label Text="Text:" FontSize="Medium" />
-        <Label Text="{Binding Item.Text}" FontSize="Small"/>
-        <Label Text="Description:" FontSize="Medium" />
-        <Label Text="{Binding Item.Description}" FontSize="Small"/>
+        <Label Text="Text:" FontSize="Large" TextColor="White"/>
+        <Label Text="{Binding Item.Text}" FontSize="Medium" TextColor="#999999"/>
+        <Label Text="Description:" FontSize="Large"  TextColor="White"/>
+        <Label Text="{Binding Item.Description}" FontSize="Medium" TextColor="#999999"/>   
+
+        
     </StackLayout>
 </ContentPage>

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabyStepz.Android", "BabySt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabyStepz.iOS", "BabyStepz\BabyStepz.iOS\BabyStepz.iOS.csproj", "{4913B70B-8F28-40AF-9018-8D109EF7F28E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabyStepz", "BabyStepz\BabyStepz\BabyStepz.csproj", "{290D6D35-4CA5-4EF4-BCBD-E128EAC514F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BabyStepz", "BabyStepz\BabyStepz\BabyStepz.csproj", "{290D6D35-4CA5-4EF4-BCBD-E128EAC514F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,7 +38,6 @@ Global
 		{66A02898-C15E-4773-80D9-66C2DE3EF54B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{66A02898-C15E-4773-80D9-66C2DE3EF54B}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
 		{4913B70B-8F28-40AF-9018-8D109EF7F28E}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{4913B70B-8F28-40AF-9018-8D109EF7F28E}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{4913B70B-8F28-40AF-9018-8D109EF7F28E}.Debug|Any CPU.Deploy.0 = Debug|iPhoneSimulator
 		{4913B70B-8F28-40AF-9018-8D109EF7F28E}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{4913B70B-8F28-40AF-9018-8D109EF7F28E}.Debug|iPhone.Build.0 = Debug|iPhone
