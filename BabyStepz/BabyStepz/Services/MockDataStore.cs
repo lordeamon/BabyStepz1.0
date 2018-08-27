@@ -15,12 +15,12 @@ namespace BabyStepz.Services
             items = new List<Item>();
             var mockItems = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Tabbed Layout", Description="Framework done." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Transsions", Description="Next item." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Make Styling Easy", Description="Must have." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Firestore opkobling", Description="Must have."  },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Integrate Sensors", Description="Nice to have" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Integrate API´s fb, twit, etc", Description="Nice to have" },
             };
 
             foreach (var item in mockItems)
