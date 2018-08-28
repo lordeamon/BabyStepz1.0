@@ -1,14 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BabyStepz.Views.ItemDetailPage"
-             Title="{Binding Title}">
-    <StackLayout Spacing="20" Padding="15">
-        <Label Text="Text:" FontSize="Large" TextColor="White"/>
-        <Label Text="{Binding Item.Text}" FontSize="Medium" TextColor="#999999"/>
-        <Label Text="Description:" FontSize="Large"  TextColor="White"/>
-        <Label Text="{Binding Item.Description}" FontSize="Medium" TextColor="#999999"/>   
+<ContentPage
+    x:Class="BabyStepz.Views.ItemDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Title}"
+    x:Subclass="BabyStepz.App">
 
-        
+    <StackLayout Padding="15" Spacing="20">
+        <Label
+            FontSize="Large"
+            Text="Text:"
+            TextColor="{x:StaticResource PrimaryTextColor}" />
+        <Label
+            FontSize="Medium"
+            Text="{Binding Item.Text}"
+            TextColor="{x:StaticResource AltTextColor}" />
+        <Label
+            FontSize="Large"
+            Text="Description:"
+            TextColor="{x:StaticResource PrimaryTextColor}" />
+        <Label
+            FontSize="Medium"
+            Text="{Binding Item.Description}"
+            TextColor="{x:StaticResource AltTextColor}" />
+
+
     </StackLayout>
 </ContentPage>

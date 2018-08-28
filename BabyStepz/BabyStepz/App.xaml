@@ -1,15 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BabyStepz.App">
+<Application
+    x:Class="BabyStepz.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <!--Global Styles-->
-            <Color x:Key="NavigationPrimary">#7b1fa2</Color>
+            <!--  Global Styles  -->
+            <Color x:Key="PrimaryColor">#7b1fa2</Color>
+            <Color x:Key="PrimaryLightColor">#ae52d4</Color>
+            <Color x:Key="PrimaryDarkColor">#4a0072</Color>
+            <Color x:Key="PrimaryTextColor">#ffffff</Color>
+            <Color x:Key="AltTextColor">#bfbbbb</Color>
+
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="BarTextColor" Value="WhiteSmoke" />
+                <Setter Property="BarBackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="BarTextColor" Value="{StaticResource PrimaryTextColor}" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
-</Application>
+</Application> 
