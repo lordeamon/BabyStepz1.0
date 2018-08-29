@@ -12,7 +12,13 @@
             <Color x:Key="PrimaryTextColor">#ffffff</Color>
             <Color x:Key="AltTextColor">#bfbbbb</Color>
 
+            <!--<Style TargetType="TabbedPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryLightColor}" />
+                <Setter Property="BarTextColor" Value="{StaticResource PrimaryTextColor}" />
+            </Style>-->
+
             <Style TargetType="NavigationPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryDarkColor}" />
                 <Setter Property="BarBackgroundColor" Value="{StaticResource PrimaryColor}" />
                 <Setter Property="BarTextColor" Value="{StaticResource PrimaryTextColor}" />
             </Style>
@@ -21,6 +27,7 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
                 <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}" />
             </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application> 

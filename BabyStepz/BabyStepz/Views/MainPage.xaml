@@ -1,17 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:views="clr-namespace:BabyStepz.Views"
-            x:Class="BabyStepz.Views.MainPage"
-            BackgroundColor="#ae52d4"
-            BarTextColor="White">
-   
+<TabbedPage
+    x:Class="BabyStepz.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:BabyStepz.Views"
+    BackgroundColor="{x:StaticResource PrimaryLightColor}"
+    BarTextColor="{x:StaticResource PrimaryTextColor}">
+
     <TabbedPage.Children>
-        <NavigationPage Title="Browse" BackgroundColor="#4a0072">
+        <NavigationPage Title="Browse">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android" Value="ic_action_menu.png"/>
-                    <On Platform="iOS" Value="tab_feed.png"/>
+                    <On Platform="Android" Value="ic_action_menu.png" />
+                    <On Platform="iOS" Value="tab_feed.png" />
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
@@ -19,11 +20,11 @@
             </x:Arguments>
         </NavigationPage>
 
-        <NavigationPage Title="About" BackgroundColor="#4a0072">
+        <NavigationPage Title="About">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android" Value="ic_action_help_outline.png"/>
-                    <On Platform="iOS" Value="tab_about.png"/>
+                    <On Platform="Android" Value="ic_action_help_outline.png" />
+                    <On Platform="iOS" Value="tab_about.png" />
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
@@ -31,5 +32,5 @@
             </x:Arguments>
         </NavigationPage>
     </TabbedPage.Children>
-   
+
 </TabbedPage>
