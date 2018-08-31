@@ -12,6 +12,7 @@ namespace BabyStepz.Views
         public MainPage()
         {
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+            On<Xamarin.Forms.PlatformConfiguration.Android>().EnableSwipePaging();
             InitializeComponent();
         }
     }
