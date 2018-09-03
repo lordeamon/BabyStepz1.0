@@ -10,19 +10,19 @@
         <Label
             FontSize="Large"
             Text="Text:"
-            TextColor="{x:StaticResource PrimaryTextColor}" />
+            TextColor="{x:DynamicResource PrimaryTextColor}" />
         <Label
             FontSize="Medium"
             Text="{Binding Item.Text}"
-            TextColor="{x:StaticResource AltTextColor}" />
+            TextColor="{x:DynamicResource AltTextColor}" />
         <Label
             FontSize="Large"
             Text="Description:"
-            TextColor="{x:StaticResource PrimaryTextColor}" />
+            TextColor="{x:DynamicResource PrimaryTextColor}" />
         <Label
             FontSize="Medium"
             Text="{Binding Item.Description}"
-            TextColor="{x:StaticResource AltTextColor}" />
+            TextColor="{x:DynamicResource AltTextColor}" />
 
 
     </StackLayout>

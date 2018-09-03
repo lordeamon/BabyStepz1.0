@@ -26,7 +26,7 @@
                 ItemSelected="OnItemSelected"
                 ItemsSource="{Binding Items}"
                 RefreshCommand="{Binding LoadItemsCommand}"
-                SeparatorColor="{x:StaticResource PrimaryColor}"
+                SeparatorColor="{x:DynamicResource PrimaryColor}"
                 VerticalOptions="FillAndExpand">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -43,7 +43,7 @@
                                     LineBreakMode="NoWrap"
                                     Style="{DynamicResource ListItemDetailTextStyle}"
                                     Text="{Binding Description}"
-                                    TextColor="{x:StaticResource AltTextColor}" />
+                                    TextColor="{x:DynamicResource AltTextColor}" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

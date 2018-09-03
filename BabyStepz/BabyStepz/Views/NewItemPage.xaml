@@ -8,24 +8,27 @@
         <ToolbarItem Clicked="Save_Clicked" Text="Save" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout Padding="15" Spacing="20">
+        <StackLayout
+            Padding="15"
+            BackgroundColor="{x:DynamicResource PrimaryDarkColor}"
+            Spacing="20">
             <Label
                 FontSize="Medium"
                 Text="Titel"
-                TextColor="{x:StaticResource PrimaryTextColor}" />
+                TextColor="{x:DynamicResource PrimaryTextColor}" />
             <Entry
                 FontSize="Small"
                 Text="{Binding Item.Text}"
-                TextColor="{x:StaticResource AltTextColor}" />
+                TextColor="{x:DynamicResource AltTextColor}" />
             <Label
                 FontSize="Medium"
                 Text="Description"
-                TextColor="{x:StaticResource PrimaryTextColor}" />
+                TextColor="{x:DynamicResource PrimaryTextColor}" />
             <Editor
                 Margin="0"
                 FontSize="Small"
                 Text="{Binding Item.Description}"
-                TextColor="{x:StaticResource AltTextColor}" />
+                TextColor="{x:DynamicResource AltTextColor}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
