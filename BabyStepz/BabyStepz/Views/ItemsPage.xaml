@@ -17,7 +17,7 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="15,0,15,0" Spacing="20">
             <ListView
                 x:Name="ItemsListView"
                 CachingStrategy="RecycleElement"
@@ -32,7 +32,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="10">
+                            <StackLayout Padding="0,15,0,15">
                                 <Label
                                     FontSize="16"
                                     LineBreakMode="NoWrap"

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BabyStepz.Views.ColorSchemePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:BabyStepz.ViewModels"
+    Title="{Binding Title}"
+    Style="{x:DynamicResource basicContentPageStyle}">
+    <ContentPage.BindingContext>
+        <vm:ColorSchemeViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

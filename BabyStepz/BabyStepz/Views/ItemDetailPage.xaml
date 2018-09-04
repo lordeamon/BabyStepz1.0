@@ -3,13 +3,18 @@
     x:Class="BabyStepz.Views.ItemDetailPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="{Binding Title}">
+    Title="{Binding Title}"
+    Style="{x:DynamicResource basicContentPageStyle}">
 
-    <StackLayout Padding="15" Spacing="20">
+    <StackLayout Padding="15,15,15,15" Spacing="20">
         <Label
             FontSize="Large"
-            Text="Text:"
+            Text="Task:"
             TextColor="{x:DynamicResource PrimaryTextColor}" />
+        <BoxView
+            BackgroundColor="{x:DynamicResource PrimaryLightColor}"
+            HeightRequest="1"
+            HorizontalOptions="FillAndExpand" />
         <Label
             FontSize="Medium"
             Text="{Binding Item.Text}"
@@ -18,11 +23,13 @@
             FontSize="Large"
             Text="Description:"
             TextColor="{x:DynamicResource PrimaryTextColor}" />
+        <BoxView
+            BackgroundColor="{x:DynamicResource PrimaryLightColor}"
+            HeightRequest="1"
+            HorizontalOptions="FillAndExpand" />
         <Label
             FontSize="Medium"
             Text="{Binding Item.Description}"
             TextColor="{x:DynamicResource AltTextColor}" />
-
-
     </StackLayout>
 </ContentPage>

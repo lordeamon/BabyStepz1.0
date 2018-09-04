@@ -7,7 +7,9 @@
     Style="{x:DynamicResource basicTabbedsPageStyle}">
 
     <TabbedPage.Children>
-        <NavigationPage Title="Browse" Style="{x:DynamicResource basicNaviPageStyle}">
+        <NavigationPage 
+            Title="Browse" 
+            Style="{x:DynamicResource basicNaviPageStyle}">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android" Value="ic_action_menu.png" />
@@ -19,7 +21,9 @@
             </x:Arguments>
         </NavigationPage>
 
-        <NavigationPage Title="About" Style="{x:DynamicResource basicNaviPageStyle}">
+        <NavigationPage
+            Title="About"
+            Style="{x:DynamicResource basicNaviPageStyle}">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android" Value="ic_action_help_outline.png" />

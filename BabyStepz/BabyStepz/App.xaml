@@ -20,7 +20,6 @@
 
             <Style x:Key="basicNaviPageStyle" TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryDarkColor}" />
-
             </Style>
 
             <Style x:Key="basicContentPageStyle" TargetType="ContentPage">
