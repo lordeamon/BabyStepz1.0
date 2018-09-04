@@ -3,20 +3,21 @@
     x:Class="BabyStepz.Views.NewItemPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="New Task">
+    Title="New Task"
+    Style="{x:DynamicResource basicContentPageStyle}">
+
     <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="Cancel_Clicked" Text="Cancel" />
         <ToolbarItem Clicked="Save_Clicked" Text="Save" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout
-            Padding="15"
-            BackgroundColor="{x:DynamicResource PrimaryDarkColor}"
-            Spacing="20">
+        <StackLayout Padding="15" Spacing="20">
             <Label
                 FontSize="Medium"
                 Text="Titel"
                 TextColor="{x:DynamicResource PrimaryTextColor}" />
             <Entry
+                Focused="Entry_Focused"
                 FontSize="Small"
                 Text="{Binding Item.Text}"
                 TextColor="{x:DynamicResource AltTextColor}" />
@@ -26,6 +27,7 @@
                 TextColor="{x:DynamicResource PrimaryTextColor}" />
             <Editor
                 Margin="0"
+                Focused="Editor_Focused"
                 FontSize="Small"
                 Text="{Binding Item.Description}"
                 TextColor="{x:DynamicResource AltTextColor}" />

@@ -4,7 +4,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:BabyStepz.ViewModels"
-    Title="{Binding Title}">
+    Title="{Binding Title}"
+    Style="{x:DynamicResource basicContentPageStyle}">
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
@@ -18,10 +19,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackLayout
-            BackgroundColor="{x:DynamicResource PrimaryLightColor}"
-            HorizontalOptions="Fill"
-            VerticalOptions="FillAndExpand">
+        <StackLayout HorizontalOptions="Fill" VerticalOptions="FillAndExpand">
             <StackLayout
                 HorizontalOptions="Center"
                 Orientation="Horizontal"
@@ -80,9 +78,9 @@
                     </Label.FormattedText>
                 </Label>
                 <Button
-                    Style="basicButtonStyle"
                     Margin="0,10,0,0"
                     Command="{Binding OpenWebCommand}"
+                    Style="{x:DynamicResource basicButtonStyle}"
                     Text="Visit FootStomp Studio" />
             </StackLayout>
         </ScrollView>

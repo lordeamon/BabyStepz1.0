@@ -4,7 +4,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Name="BrowseItemsPage"
-    Title="{Binding Title}">
+    Title="{Binding Title}"
+    Style="{x:DynamicResource basicContentPageStyle}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Clicked="AddItem_Clicked" Text="Add">
             <ToolbarItem.Icon>
@@ -26,7 +27,7 @@
                 ItemSelected="OnItemSelected"
                 ItemsSource="{Binding Items}"
                 RefreshCommand="{Binding LoadItemsCommand}"
-                SeparatorColor="{x:DynamicResource PrimaryColor}"
+                SeparatorColor="{x:DynamicResource PrimaryLightColor}"
                 VerticalOptions="FillAndExpand">
                 <ListView.ItemTemplate>
                     <DataTemplate>

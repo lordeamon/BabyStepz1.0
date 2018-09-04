@@ -6,26 +6,34 @@
     <Application.Resources>
         <ResourceDictionary>
             <!--  Global Styles  -->
-            <Color x:Key="PrimaryColor">#7b1fa2</Color>
+            <Color x:Key="OriginalColor">#7b1fa2</Color>
+            <Color x:Key="PrimaryColor">#010b1c</Color>
             <Color x:Key="PrimaryLightColor">#ae52d4</Color>
             <Color x:Key="PrimaryDarkColor">#4a0072</Color>
             <Color x:Key="PrimaryTextColor">#ffffff</Color>
             <Color x:Key="AltTextColor">#bfbbbb</Color>
 
             <Style x:Key="basicTabbedsPageStyle" TargetType="TabbedPage">
-                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryDarkColor}" />
+                <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryDarkColor}" />
                 <Setter Property="BarTextColor" Value="{DynamicResource PrimaryTextColor}" />
             </Style>
 
             <Style x:Key="basicNaviPageStyle" TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryDarkColor}" />
-                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
 
             </Style>
 
-            <Style x:Key="basicButtonStyle" TargetType="Button">
+            <Style x:Key="basicContentPageStyle" TargetType="ContentPage">
                 <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
+            </Style>
+
+            <Style x:Key="basicButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryLightColor}" />
                 <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="CornerRadius" Value="7" />
+                <Setter Property="BorderRadius" Value="3" />
+                <Setter Property="BorderWidth" Value="3" />
+                <Setter Property="BorderColor" Value="{DynamicResource PrimaryDarkColor}" />
             </Style>
 
         </ResourceDictionary>
