@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BabyStepz.Views.CameraPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:BabyStepz.ViewModels"
+    x:Name="CameraView"
+    Title="{Binding Title}"
+    Style="{x:DynamicResource basicContentPageStyle}">
+    <ContentPage.BindingContext>
+        <vm:CameraViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Image x:Name="PhotoImage" Grid.ColumnSpan="2" />
+            <Button
+                x:Name="CameraButton"
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="3,3,0,3"
+                Clicked="CameraButton_Clicked"
+                Style="{x:DynamicResource basicButtonStyle}"
+                Text="Take Photo" />
+            <Button
+                x:Name="SaveButton"
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="0,3,3,3"
+                Clicked="SaveButton_Clicked"
+                Style="{x:DynamicResource basicButtonStyle}"
+                Text="Save Photo" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

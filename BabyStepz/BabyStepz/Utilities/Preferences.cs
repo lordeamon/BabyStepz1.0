@@ -1,4 +1,4 @@
-﻿using BabyStepz.ViewModels;
+﻿using BabyStepz.Utilities;
 using System;
 
 namespace BabyStepz.Models

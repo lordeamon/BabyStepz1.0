@@ -27,7 +27,7 @@
                 ItemSelected="OnItemSelected"
                 ItemsSource="{Binding Items}"
                 RefreshCommand="{Binding LoadItemsCommand}"
-                SeparatorColor="{x:DynamicResource PrimaryLightColor}"
+                SeparatorColor="{x:DynamicResource PrimaryDarkColor}"
                 VerticalOptions="FillAndExpand">
                 <ListView.ItemTemplate>
                     <DataTemplate>

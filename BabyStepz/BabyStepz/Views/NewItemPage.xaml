@@ -13,22 +13,23 @@
     <ContentPage.Content>
         <StackLayout Padding="15" Spacing="20">
             <Label
-                FontSize="Medium"
+                FontSize="Large"
                 Text="Titel"
                 TextColor="{x:DynamicResource PrimaryTextColor}" />
             <Entry
                 Focused="Entry_Focused"
-                FontSize="Small"
-                Text="{Binding Item.Text}"
+                FontSize="Medium"
+                Placeholder="New Item Name - Placeholder"
+                PlaceholderColor="AliceBlue"
                 TextColor="{x:DynamicResource AltTextColor}" />
             <Label
-                FontSize="Medium"
+                FontSize="Large"
                 Text="Description"
                 TextColor="{x:DynamicResource PrimaryTextColor}" />
             <Editor
                 Margin="0"
                 Focused="Editor_Focused"
-                FontSize="Small"
+                FontSize="Medium"
                 Text="{Binding Item.Description}"
                 TextColor="{x:DynamicResource AltTextColor}" />
         </StackLayout>

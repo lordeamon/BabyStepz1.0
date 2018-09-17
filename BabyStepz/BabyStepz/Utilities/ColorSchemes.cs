@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace BabyStepz.ViewModels
+namespace BabyStepz.Utilities
 {
     public enum ColorSchemeType
     {
 
         Primary,
+        Seconda,
         count
     }
 
@@ -35,7 +36,22 @@ namespace BabyStepz.ViewModels
                     
                 },
 
-                
+                new ColorScheme()
+                {
+                    SchemeType = ColorSchemeType.Seconda,
+                    Name = "Seconda Colors",
+                    Square = "logo.png",
+                    Logo = "logo.png",
+                    PrimaryColor = 0x159c7e,
+                    PrimaryDarkColor = 0xdf7e1c,
+                    PrimaryLightColor = 0xec5353,
+                    PrimaryTextColor =0xFFFFFF ,
+                    AltTextColor = 0xBFBBBB,
+
+
+                },
+
+
             };
         }
 

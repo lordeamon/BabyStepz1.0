@@ -35,20 +35,8 @@ namespace BabyStepz.Views
         async void Cancel_Clicked(object sender, EventArgs e)
         {
 
-            var answer = await DisplayAlert("Alert", "Cancel your post?", "Yes", "No");
-
-            if (answer)
-            {
                 await Navigation.PopModalAsync();
-            }
-            else if (!answer)
-            {
 
-            }
-            
-
-            
-            
         }
 
         private void Entry_Focused(Entry sender, FocusEventArgs e)
