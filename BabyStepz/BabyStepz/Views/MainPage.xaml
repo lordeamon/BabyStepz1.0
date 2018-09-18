@@ -22,7 +22,7 @@
         <NavigationPage Title="Camera" Style="{x:DynamicResource basicNaviPageStyle}">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android" Value="ic_action_help_outline.png" />
+                    <On Platform="Android" Value="ic_action_camera.png" />
                     <On Platform="iOS" Value="tab_about.png" />
                 </OnPlatform>
             </NavigationPage.Icon>
@@ -34,7 +34,7 @@
         <NavigationPage Title="ColorSchemes" Style="{x:DynamicResource basicNaviPageStyle}">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android" Value="ic_action_help_outline.png" />
+                    <On Platform="Android" Value="ic_action_colors.png" />
                     <On Platform="iOS" Value="tab_about.png" />
                 </OnPlatform>
             </NavigationPage.Icon>
