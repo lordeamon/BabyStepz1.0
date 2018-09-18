@@ -2,6 +2,7 @@
 using BabyStepz.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Plugin.Media;
 
 
 namespace BabyStepz.Views
@@ -16,7 +17,18 @@ namespace BabyStepz.Views
 
         private async void CameraButton_Clicked(object sender, EventArgs e)
         {
-            var photo = await Plugin.Media.CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions() { });
+            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+            {
+                await DisplayAlert("No Camera", ":( No camera avaialble.", "OK");
+                return;
+            }
+
+            var photo = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions()
+            {
+                Directory = "Pictures",
+                Name = "test.jpg",
+                SaveToAlbum = true
+            });
 
             if (photo != null)
                 PhotoImage.Source = ImageSource.FromStream(() => { return photo.GetStream(); });

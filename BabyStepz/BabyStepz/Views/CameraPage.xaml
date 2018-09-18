@@ -22,7 +22,7 @@
                 x:Name="CameraButton"
                 Grid.Row="1"
                 Grid.Column="0"
-                Margin="3,3,0,3"
+                Margin="3,0,0,3"
                 Clicked="CameraButton_Clicked"
                 Style="{x:DynamicResource basicButtonStyle}"
                 Text="Take Photo" />
@@ -30,7 +30,7 @@
                 x:Name="SaveButton"
                 Grid.Row="1"
                 Grid.Column="1"
-                Margin="0,3,3,3"
+                Margin="0,0,3,3"
                 Clicked="SaveButton_Clicked"
                 Style="{x:DynamicResource basicButtonStyle}"
                 Text="Save Photo" />
