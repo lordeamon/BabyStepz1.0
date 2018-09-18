@@ -25,9 +25,10 @@ namespace BabyStepz.Views
 
             var photo = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions()
             {
-                Directory = "Pictures",
-                Name = "test.jpg",
+                Directory = "BabyStepz",
+                Name = DateTime.Now +".jpg",
                 SaveToAlbum = true
+                
             });
 
             if (photo != null)
