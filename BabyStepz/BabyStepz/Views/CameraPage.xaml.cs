@@ -12,7 +12,8 @@ namespace BabyStepz.Views
 	public partial class CameraPage : ContentPage
 	{
         public bool SaveToAlbum;
-		public CameraPage ()
+
+        public CameraPage ()
 		{
             SaveToAlbum = false;
             InitializeComponent ();
@@ -20,12 +21,17 @@ namespace BabyStepz.Views
 
         private async void CameraButton_Clicked(object sender, EventArgs e)
         {
+            //Inializes Camera and all its Functions
+            await CrossMedia.Current.Initialize();
+
+            //check the availability  and compatibility of the Camera
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
                 await DisplayAlert("No Camera", ":( No camera avaialble.", "OK");
                 return;
             }
 
+            //The camera opens, and then generates the info an detail of the image and saves it.
             var photo = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions()
             {
                 Directory = "BabyStepz",
@@ -34,12 +40,21 @@ namespace BabyStepz.Views
                 
             });
 
+            //The taken photo is converted to a stream, the file disposed off, stream the sent to the display.
             if (photo != null)
-                PhotoImage.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
+            {
+                PhotoImage.Source = ImageSource.FromStream(() => 
+                {
+                    var stream = photo.GetStream();
+                    photo.Dispose();
+                    return stream;
+
+                });
+            }
+                
         }
 
-        
-
+        //A switch to toggle whether to save or not save the next taken photo
         private void SaveSwitch_Toggled(Switch sender, ToggledEventArgs e)
         {
           
@@ -49,6 +64,7 @@ namespace BabyStepz.Views
             }
         }
 
+        //Not in Use Atm Moment - but a name generating function, that should work on bother Android and Ios
         private string SetImageFileName(string fileName = null)
         {
             if (Device.RuntimePlatform == Device.Android)
