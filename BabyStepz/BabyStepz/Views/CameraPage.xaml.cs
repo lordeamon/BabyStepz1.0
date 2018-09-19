@@ -1,5 +1,6 @@
 ﻿using System;
 using BabyStepz.ViewModels;
+using BabyStepz.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Plugin.Media;
@@ -10,9 +11,11 @@ namespace BabyStepz.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CameraPage : ContentPage
 	{
+        public bool SaveToAlbum;
 		public CameraPage ()
 		{
-			InitializeComponent ();
+            SaveToAlbum = false;
+            InitializeComponent ();
 		}
 
         private async void CameraButton_Clicked(object sender, EventArgs e)
@@ -27,7 +30,7 @@ namespace BabyStepz.Views
             {
                 Directory = "BabyStepz",
                 Name = DateTime.Now +".jpg",
-                SaveToAlbum = true
+                SaveToAlbum = SaveToAlbum
                 
             });
 
@@ -35,11 +38,14 @@ namespace BabyStepz.Views
                 PhotoImage.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
         }
 
-        private void SaveButton_Clicked(object sender, EventArgs e)
+        
+
+        private void SaveSwitch_Toggled(Switch sender, ToggledEventArgs e)
         {
-            if (PhotoImage.Source != null)
+          
+            if (SaveToAlbum != sender.IsToggled)
             {
-                
+                SaveToAlbum = sender.IsToggled;
             }
         }
 

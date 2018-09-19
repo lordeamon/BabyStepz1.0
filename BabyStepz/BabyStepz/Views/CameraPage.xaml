@@ -17,23 +17,28 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Image x:Name="PhotoImage" Grid.ColumnSpan="2" />
+            <Image x:Name="PhotoImage" Grid.ColumnSpan="3" />
+
+            <Switch
+                x:Name="SaveSwitch"
+                Grid.Row="1"
+                Grid.Column="2"
+                HorizontalOptions="CenterAndExpand"
+                IsToggled="False"
+                Toggled="SaveSwitch_Toggled"
+                VerticalOptions="CenterAndExpand" />
+
             <Button
                 x:Name="CameraButton"
                 Grid.Row="1"
-                Grid.Column="0"
+                Grid.Column="1"
+                Grid.ColumnSpan="1"
                 Margin="3,0,0,3"
                 Clicked="CameraButton_Clicked"
                 Style="{x:DynamicResource basicButtonStyle}"
-                Text="Take Photo" />
-            <Button
-                x:Name="SaveButton"
-                Grid.Row="1"
-                Grid.Column="1"
-                Margin="0,0,3,3"
-                Clicked="SaveButton_Clicked"
-                Style="{x:DynamicResource basicButtonStyle}"
-                Text="Save Photo" />
+                Text="Take Photo"
+                VerticalOptions="EndAndExpand" />
         </Grid>
+
     </ContentPage.Content>
 </ContentPage>
