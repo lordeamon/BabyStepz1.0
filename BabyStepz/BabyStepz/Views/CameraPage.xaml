@@ -19,14 +19,21 @@
 
             <Image x:Name="PhotoImage" Grid.ColumnSpan="3" />
 
+            <Label
+                Grid.Row="1"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                Text="Save"
+                TextColor="{x:DynamicResource PrimaryTextColor}"
+                VerticalOptions="Start" />
             <Switch
                 x:Name="SaveSwitch"
                 Grid.Row="1"
                 Grid.Column="2"
                 HorizontalOptions="CenterAndExpand"
-                IsToggled="False"
+                IsToggled="True"
                 Toggled="SaveSwitch_Toggled"
-                VerticalOptions="CenterAndExpand" />
+                VerticalOptions="EndAndExpand" />
 
             <Button
                 x:Name="CameraButton"
