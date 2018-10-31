@@ -12,7 +12,7 @@ namespace BabyStepz.ViewModels
 
         public CameraViewModel()
         {
-            Title = "Simple Camera Sample";
+            Title = "Camera Functions Sample";
             SaveToAlbum = true;
            
         }

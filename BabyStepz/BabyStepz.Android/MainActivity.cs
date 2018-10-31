@@ -20,6 +20,7 @@ namespace BabyStepz.Droid
 
             int uiOptions = (int)Window.DecorView.SystemUiVisibility;
 
+            //uiOptions |= (int)SystemUiFlags.LowProfile;
             //uiOptions |= (int)SystemUiFlags.Fullscreen;
             //uiOptions |= (int)SystemUiFlags.HideNavigation;
             //uiOptions |= (int)SystemUiFlags.Immersive;
@@ -27,6 +28,8 @@ namespace BabyStepz.Droid
             //uiOptions |= (int)SystemUiFlags.LayoutFlags;
 
             Window.DecorView.SystemUiVisibility = (StatusBarVisibility)uiOptions;
+
+
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
